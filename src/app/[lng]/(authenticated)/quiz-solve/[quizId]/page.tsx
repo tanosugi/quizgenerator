@@ -26,7 +26,7 @@ export default function QuizSolve({
   const [quizLength, setQuizLength] = useState(0);
   const [currentQuizIndex, setCurrentQuizIndex] = useState(0);
   const [correctAnswered, setCorrectAnswered] = useState(0);
-  const [answerChosen, setAnswerChosen] = useState("");
+  const [answerChosen, setAnswerChosen] = useState<number>();
   const [isCorrect, setIsCorrect] = useState<boolean>();
   const [explanation, setExplanation] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
@@ -60,6 +60,7 @@ export default function QuizSolve({
   console.log("answerChosen:", answerChosen);
   const answer = (answerChosenIndex: number) => {
     if (!isAnswered) {
+      setAnswerChosen(answerChosenIndex);
       if (currentQuiz?.isCorrect && currentQuiz?.isCorrect[answerChosenIndex]) {
         setIsCorrect(true);
         setCorrectAnswered(correctAnswered + 1);
@@ -81,7 +82,7 @@ export default function QuizSolve({
   };
   const setForNextQuiz = () => {
     setCurrentQuizIndex(currentQuizIndex + 1);
-    setAnswerChosen("");
+    setAnswerChosen(undefined);
     setExplanation("");
     setIsAnswered(false);
   };
@@ -133,10 +134,9 @@ export default function QuizSolve({
                   children: (currentQuiz?.choiceText && currentQuiz?.choiceText[0]) || "",
                 },
               },
-              status: answerChosen == "Choice-a" ? (isCorrect ? "correct" : "incorrect") : "a",
+              status: answerChosen == 0 ? (isCorrect ? "correct" : "incorrect") : "a",
               onClick: () => {
                 answer(0);
-                setAnswerChosen("Choice-a");
               },
             },
             "Choice-b": {
@@ -145,10 +145,9 @@ export default function QuizSolve({
                   children: (currentQuiz?.choiceText && currentQuiz?.choiceText[1]) || "",
                 },
               },
-              status: answerChosen == "Choice-b" ? (isCorrect ? "correct" : "incorrect") : "b",
+              status: answerChosen == 1 ? (isCorrect ? "correct" : "incorrect") : "b",
               onClick: () => {
                 answer(1);
-                setAnswerChosen("Choice-b");
               },
             },
             "Choice-c": {
@@ -157,10 +156,9 @@ export default function QuizSolve({
                   children: (currentQuiz?.choiceText && currentQuiz?.choiceText[2]) || "",
                 },
               },
-              status: answerChosen == "Choice-c" ? (isCorrect ? "correct" : "incorrect") : "c",
+              status: answerChosen == 2 ? (isCorrect ? "correct" : "incorrect") : "c",
               onClick: () => {
                 answer(2);
-                setAnswerChosen("Choice-c");
               },
             },
             explanation: { children: explanation },
