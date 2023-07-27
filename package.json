@@ -1,0 +1,50 @@
+{
+  "name": "quiz-generator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "build": "next build",
+    "start": "next start",
+    "build-start": "next build && next start",
+    "lint": "next lint",
+    "amplify-pull": "amplify pull",
+    "amplify-pull-build-start": "amplify pull && next build && next start",
+    "extract": "yarn run i18next 'src/**/*.{tx,tsx}' ",
+    "translate": "yarn json-autotranslate --input src/locales/ --config ./gcp-service-account.json --delete-unused-strings --type natural --source-language en"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^5.0.5",
+    "@sentry/react": "^7.60.0",
+    "@sentry/tracing": "^7.60.0",
+    "@types/node": "20.4.4",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "accept-language": "^3.0.18",
+    "aws-amplify": "^5.3.5",
+    "aws-crt": "^1.15.22",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12",
+    "i18next": "^23.2.11",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "i18next-resources-to-backend": "^1.1.4",
+    "logrocket": "^4.0.4",
+    "next": "13.4.12",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^13.0.2",
+    "react-modal": "^3.16.1",
+    "react-spinners": "^0.13.8",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.12",
+    "@types/react-modal": "^3.16.0",
+    "dotenv-cli": "^7.2.1",
+    "i18n-auto-translation": "^1.2.10",
+    "i18n-translate-json": "^1.1.0",
+    "i18next-parser": "^8.3.0",
+    "json-autotranslate": "^1.11.0"
+  }
+}

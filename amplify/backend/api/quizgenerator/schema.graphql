@@ -1,0 +1,36 @@
+type User @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  name: String
+  answeredQuestions: Int
+  email: AWSEmail
+}
+
+type Attempt @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  quizsetID: ID! @index(name: "byQuizSet")
+  numberOfCorrectAnswer: Int
+  user: String
+  time: Int
+  numberOfQuiz: Int
+}
+
+type Quiz @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  question: String
+  choiceText: [String]
+  isCorrect: [Boolean]
+  explanation: [String]
+  quizsetID: ID! @index(name: "byQuizSet")
+}
+
+type QuizSet @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  subject: String
+  level: String
+  numberOfQuiz: Int
+  Quizzes: [Quiz] @hasMany(indexName: "byQuizSet", fields: ["id"])
+  Attempts: [Quiz] @hasMany(indexName: "byQuizSet", fields: ["id"])
+  numberOfAttempt: Int
+  lng: String
+}
+ 

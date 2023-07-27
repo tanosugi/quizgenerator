@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-quizgenerator-dev-140615-authRole",
+      "UnauthRoleArn": "arn:aws:iam::165141496774:role/amplify-quizgenerator-dev-140615-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::165141496774:role/amplify-quizgenerator-dev-140615-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-quizgenerator-dev-140615-deployment",
+      "UnauthRoleName": "amplify-quizgenerator-dev-140615-unauthRole",
+      "StackName": "amplify-quizgenerator-dev-140615",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:165141496774:stack/amplify-quizgenerator-dev-140615/ec89d4e0-2898-11ee-9934-0e13daef262b",
+      "AmplifyAppId": "d2p6h92bk7hq6r"
+    },
+    "categories": {
+      "auth": {
+        "quizgenerator": {}
+      }
+    }
+  }
+}
