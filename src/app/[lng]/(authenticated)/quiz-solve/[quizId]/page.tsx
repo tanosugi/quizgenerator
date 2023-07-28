@@ -31,20 +31,20 @@ export default function QuizSolve({
   const [explanation, setExplanation] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
   const fetchQuiz = async () => {
-    // const resp = await DataStore.query(Quiz, (c) => c.quizsetID.eq(quizId));
-    // console.log("resp:", resp);
-    // setQuizs(resp);
-    // setQuizLength(resp.length);
+    const resp = await DataStore.query(Quiz, (c) => c.quizsetID.eq(quizId));
+    console.log("resp:", resp);
+    setQuizs(resp);
+    setQuizLength(resp.length);
   };
   const fetchQuizSet = async () => {
-    // const resp = await DataStore.query(QuizSet, (c) => c.id.eq(quizId));
-    // console.log("resp:", resp);
-    // setQuizSet(resp[0]);
+    const resp = await DataStore.query(QuizSet, (c) => c.id.eq(quizId));
+    console.log("resp:", resp);
+    setQuizSet(resp[0]);
   };
   const fetchUser = async () => {
-    // const resp = await DataStore.query(User, (c) => c.email.eq(user?.attributes?.email));
-    // console.log("resp:", resp);
-    // setUserInDataStore(resp[0]);
+    const resp = await DataStore.query(User, (c) => c.email.eq(user?.attributes?.email));
+    console.log("resp:", resp);
+    setUserInDataStore(resp[0]);
   };
   useEffect(() => {
     fetchQuiz();
