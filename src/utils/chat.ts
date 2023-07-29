@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API_URL = "https://api.openai.com/v1/";
-const MODEL = "gpt-3.5-turbo-0613";
+// const MODEL = "gpt-3.5-turbo-0613";
+const MODEL = "gpt-4-0613";
 const API_KEY = process.env.NEXT_PUBLIC_KEY;
 
 const chat = async ({
@@ -18,6 +19,7 @@ const chat = async ({
       `${API_URL}chat/completions`,
       {
         model: MODEL,
+        max_tokens: 8192,
         messages: [
           // { role: "system", content: system_content },
           { role: "user", content: user_content },
