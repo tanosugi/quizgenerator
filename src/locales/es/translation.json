@@ -41,5 +41,6 @@
   "English, Japanese, Chinese, and Spanish, Portuguese are supported. Not only will the menu be displayed in the selected language, but the quiz, answers, and explanations will also be displayed in that language!": "Se admiten los idiomas inglés, japonés, chino y español y portugués. ¡No solo se mostrará el menú en el idioma seleccionado, sino que el cuestionario, las respuestas y las explicaciones también se mostrarán en ese idioma!",
   "Home": "Hogar",
   "Quiz List": "Lista de pruebas",
-  "Sign Out": "Desconectar"
+  "Sign Out": "Desconectar",
+  "Generating Quiz": "Generando Cuestionario"
 }

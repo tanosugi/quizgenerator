@@ -41,5 +41,6 @@
   "English, Japanese, Chinese, and Spanish, Portuguese are supported. Not only will the menu be displayed in the selected language, but the quiz, answers, and explanations will also be displayed in that language!": "英語、日本語、中国語、スペイン語、ポルトガル語がサポートされています。選択した言語でメニューが表示されるだけでなく、クイズ、答え、解説もその言語で表示されます。",
   "Home": "ホーム",
   "Quiz List": "クイズ一覧",
-  "Sign Out": "サインアウト"
+  "Sign Out": "サインアウト",
+  "Generating Quiz": "クイズの生成"
 }

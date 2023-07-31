@@ -41,5 +41,6 @@
   "English, Japanese, Chinese, and Spanish, Portuguese are supported. Not only will the menu be displayed in the selected language, but the quiz, answers, and explanations will also be displayed in that language!": "支持英语、日语、中文、西班牙语、葡萄牙语。不仅菜单会以所选语言显示，而且测验、答案和解释也会以该语言显示！",
   "Home": "家",
   "Quiz List": "测验列表",
-  "Sign Out": "登出"
+  "Sign Out": "登出",
+  "Generating Quiz": "生成测验"
 }

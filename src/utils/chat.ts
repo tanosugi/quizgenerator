@@ -2,7 +2,8 @@ import axios from "axios";
 
 const API_URL = "https://api.openai.com/v1/";
 // const MODEL = "gpt-3.5-turbo-0613";
-const MODEL = "gpt-4-0613";
+const MODEL = "gpt-3.5-turbo-16k";
+// const MODEL = "gpt-4-0613";
 const API_KEY = process.env.NEXT_PUBLIC_KEY;
 
 const chat = async ({
@@ -26,7 +27,7 @@ const chat = async ({
         ],
         functions: [function_for_chatgptapi],
         function_call: "auto",
-        timeout: 60,
+        // request_timeout: 60,
       },
       {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${API_KEY}` },

@@ -8,11 +8,11 @@ import { modalStyle } from "@/styles/modalStyle";
 import { CreateQuizSetWithoutSaveForm, GenerateQuizHeaderView } from "@/ui-components";
 import { CreateQuizSetWithoutSaveFormInputValues } from "@/ui-components/CreateQuizSetWithoutSaveForm";
 import chat from "@/utils/chat";
+import CountDownToGenerateQuiz from "@/utils/count-down-to-generate-quiz";
 import { DataStore } from "aws-amplify";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Modal from "react-modal";
-import { BarLoader } from "react-spinners";
 
 export default function Page({
   params: { lng },
@@ -104,7 +104,7 @@ export default function Page({
         }}
       />
       <Modal isOpen={isWaitingModalOpen} style={modalStyle}>
-        <BarLoader />
+        <CountDownToGenerateQuiz timeout={60} lng={lng} />
       </Modal>
     </Center>
   );
