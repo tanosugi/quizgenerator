@@ -35,6 +35,11 @@ export default function CreateQuizSetWithoutSaveForm(props) {
         numValues: [0],
         validationMessage: "The value must be greater than 0",
       },
+      {
+        type: "LessThanNum",
+        numValues: [6],
+        validationMessage: "The value must be less than 6",
+      },
     ],
   };
   const runValidationTasks = async (
@@ -143,6 +148,7 @@ export default function CreateQuizSetWithoutSaveForm(props) {
       ></TextField>
       <TextField
         label="Number of Quiz"
+        descriptiveText="The value must be less than 6"
         type="number"
         step="any"
         value={Field2}

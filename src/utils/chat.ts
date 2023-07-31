@@ -26,6 +26,7 @@ const chat = async ({
         ],
         functions: [function_for_chatgptapi],
         function_call: "auto",
+        timeout: 60,
       },
       {
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${API_KEY}` },

@@ -59,3 +59,4 @@ amplifytools.xcconfig
 
 
 gcp-service-account.json
+/.json-autotranslate-cache

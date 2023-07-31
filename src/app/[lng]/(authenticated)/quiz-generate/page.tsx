@@ -87,7 +87,7 @@ export default function Page({
   };
   return (
     <Center>
-      <GenerateQuizHeaderView overrides={{ "Generate Quiz": { label: t("Generate Quiz") } }} />
+      <GenerateQuizHeaderView overrides={{ "Generate Quiz": { children: t("Generate Quiz") } }} />
       <CreateQuizSetWithoutSaveForm
         onSubmit={(fields) => onSubmitForm(fields)}
         overrides={{
@@ -96,10 +96,11 @@ export default function Page({
           Field1: { label: t("Level"), placeholder: t("third grade in elementary school") },
           Field2: {
             label: t("Number of Quiz"),
+            descriptiveText: t("The value must be less than 6"),
           },
           ClearButton: { children: t("Clear") },
-          SubmitButton: { label: t("Submit") },
-          "": { label: t("") },
+          SubmitButton: { childern: t("Submit") },
+          // "": { label: t("") },
         }}
       />
       <Modal isOpen={isWaitingModalOpen} style={modalStyle}>
